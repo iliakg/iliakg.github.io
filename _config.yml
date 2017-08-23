@@ -1,0 +1,8 @@
+# Site settings
+title: Sublime Next
+description: "bla bla bla"
+
+# Build settings
+markdown: kramdown
+
+permalink: /:categories/:slug

@@ -1,0 +1,13 @@
+<div class="post_item">
+  <a href="{{ post.url }}">
+    <div class="post_date">{{post.date | date: "%d.%m.%Y %X"}}</div>
+    <div class="post_id">#{{post.id}}</div>
+  </a>
+
+  <div class="text">
+    {% if post.image %}
+      <img src="/images/{{post.image}}"/>
+    {% endif %}
+    {{post.content | markdownify}}
+  </div>
+</div>

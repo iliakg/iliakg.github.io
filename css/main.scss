@@ -1,0 +1,134 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+@mixin inline_block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+@mixin border_radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: Verdana,sans-serif;
+  color: #333;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+// ========================= WRAPPER =========================
+#wrapper{
+  text-align: center;
+}
+
+// ========================= SIDEBAR =========================
+#sidebar{
+  width: 250px;
+  @include inline_block;
+  margin-top: 20px;
+  text-align: left;
+  margin-right: 20px;
+
+  h1{
+
+    a{
+      font-size: 32px;
+      font-weight: normal;
+      color: #333;
+      text-decoration: none;
+    }
+  }
+
+  ul.tags_list{
+    li{
+      margin-bottom: 5px;
+
+      a{
+        text-decoration: none;
+        color: #555;
+      }
+    }
+  }
+}
+
+
+// ========================= CONTENT =========================
+#content{
+  width: 730px;
+  @include inline_block;
+  margin-top: 20px;
+  text-align: left;
+}
+
+
+// ========================= POSTS =========================
+#posts{
+  .post_item{
+    background: #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    border: solid 1px #ccc;
+    @include border_radius(4px);
+
+    a{
+      color: #333;
+      text-decoration: none;
+
+      .post_date{
+        @include inline_block;
+        margin-right: 5px;
+      }
+
+      .post_id{
+        @include inline_block;
+      }
+    }
+
+    .text{
+      width: 100%;
+      @include inline_block;
+      margin-top: 10px;
+
+      img{
+        width: 200px;
+        float: left;
+        margin: 0 20px 20px 0;
+      }
+
+      p{
+        margin: 0;
+      }
+    }
+
+    ul.tags_list{
+      margin-top: 10px;
+
+      li{
+        @include inline_block;
+        margin-right: 5px;
+
+        a{
+          color: #ccc;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
