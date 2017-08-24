@@ -1,0 +1,24 @@
+{% if page.cover %}
+  {% assign cover = page.cover %}
+{% else %}
+  {% assign cover = "sublime.jpeg" %}
+{% endif %}
+
+<div id="header">
+  <div class="cover" style="background-image: url('/images/{{cover}}')"></div>
+  <div class="title_block">
+    {% if page.header_tag %}
+      <h1><a href="/">{{site.title}}</a> <span>#{{page.header_tag}}</span></h1>
+    {% else %}
+      <h1><a href="/">{{site.title}}</a></h1>
+    {% endif %}
+  </div>
+</div>
+<ul id="main_tags">
+  <li><a href="/">home</a></li>
+  <li><a href="/tag/ruby/">ruby</a></li>
+  <li><a href="/tag/ruby-on-rails/">ruby on rails</a></li>
+  <li><a href="/tag/git/">git</a></li>
+  <li><a href="/tag/oop/">ООП</a></li>
+  <li><a href="/tag/notes/">notes</a></li>
+</ul>

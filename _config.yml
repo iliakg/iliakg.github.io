@@ -1,8 +1,15 @@
+include: ['_pages']
+
 # Site settings
 title: Sublime Next
-description: "bla bla bla"
+description: "notepad"
 
 # Build settings
 markdown: kramdown
 
-permalink: /:categories/:slug
+permalink: /:slug
+
+collections:
+  tag:
+    output: true
+    permalink: /tag/:name/
